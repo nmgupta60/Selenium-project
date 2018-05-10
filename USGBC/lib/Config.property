@@ -1,0 +1,4 @@
+ChromeDriver = C:\\Users\\ARJUN\\Desktop\\Testing\\chromedriver_win32\\chromedriver.exe
+FirefoxDriver = C:\\Users\\ARJUN\\Desktop\\Testing\\geckodriver-v0.17.0-win64\\geckodriver.exe
+URL1 = http://test-dynamic-usgbc.pantheonsite.io/membership/contact
+URL2 =  http://test-dynamic-usgbc.pantheonsite.io/register-exams/exam
