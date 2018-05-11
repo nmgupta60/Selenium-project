@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
 
+import com.DynamicUSGBC.XlsReader;
+
 public class BaseClass {
 
 	public static WebDriver driver;
@@ -16,9 +18,10 @@ public class BaseClass {
 	public String MembershipUrl = "http://test-dynamic-usgbc.pantheonsite.io/membership/contact";
 
 	@BeforeClass
-	public void setup(String browserName, String environment) {
+	public void setup(String browserName) {
 
 		System.out.println("This is Before Class");
+		data= new XlsReader(System.getProperty("C:\\Users\\ARJUN\\git\\Selenium-project\\USGBC\\TestData\\Input.xls"));
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "./lib/chromedriver.exe");
@@ -34,12 +37,13 @@ public class BaseClass {
 		}
 
 		else if (browserName.equals("Mallikarjun")) {
-			System.out.println("I am Mallikarjunr");
+			System.out.println("I am Mallikarjun");
 		}
 		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		
+		driver.get(MembershipUrl);
+		System.out.println(driver.getTitle());
 		
 	}
 }

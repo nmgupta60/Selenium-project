@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MembersipDetailsVerify.Membership">
+      <class name="com.Usgbc.TestCases.Membershipflow">
         <methods>
-          <include name="testChrome"/>
-          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="MembershipRegistration"/>
         </methods>
-      </class> <!-- MembersipDetailsVerify.Membership -->
+      </class> <!-- com.Usgbc.TestCases.Membershipflow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
